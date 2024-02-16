@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="amt1">
+    <input type="text" id="amt2">
+
+    <div id="display1"></div>
+    <div id="display2"></div>
+    <button onclick="dis()">total</button>
+
+    <script>
+
+        function dis(){
+            let am1 = +(document.getElementById("amt1").value);
+            let am2 = +(document.getElementById("amt2").value);
+            let tot = am1 + am2;
+
+            document.getElementById("display1").innerText = tot;
+            
+            if(tot <20000){
+                document.getElementById("display2").innerText = tot * 0.05;
+            }
+            else{
+                document.getElementById("display2").innerText = tot * 0.10;
+            }
+        }
+
+    </script>
+</body>
+</html>

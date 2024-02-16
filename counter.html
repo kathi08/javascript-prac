@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="addit">
+    <div id="value">5</div>
+    <button onclick="plus()">+</button>
+    <button onclick="minus()">-</button>
+
+    <script>
+         let val =0;
+         let addi = 0;
+
+        function plus(){
+            addi = +(document.getElementById("addit").value);
+           val = +(document.getElementById("value").innerText);
+            if(addi==0){
+           document.getElementById("value").innerText = ++val;
+            }
+            else{
+                document.getElementById("value").innerText = addi +val;
+            }
+        }
+        function minus(){
+            addi = +(document.getElementById("addit").value);
+           val = +(document.getElementById("value").innerText);
+           if(addi==0){
+           document.getElementById("value").innerText = --val;
+            }
+            else{
+                document.getElementById("value").innerText = val - addi;
+            }
+        }
+
+
+    </script>
+</body>
+</html>
